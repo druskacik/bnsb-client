@@ -38,14 +38,10 @@
                 </div>
             </a-checkbox-group>
         </div>
-        <a-button
-            type="primary"
-            class="app-form__submit-button"
-            @click="submitRequest"
+        <app-form-submit-button
+            :onClick="submitRequest"
             :loading="loading"
-        >
-            Submit
-        </a-button>
+        />
     </div>
 </template>
 
@@ -55,7 +51,12 @@ import axios from 'axios';
 import { Modal } from 'ant-design-vue';
 import config from '../config';
 
+import AppFormSubmitButton from './AppFormSubmitButton.vue';
+
 export default {
+    components: {
+        AppFormSubmitButton,
+    },
     name: 'app-form',
     data() {
         return {
@@ -169,8 +170,12 @@ export default {
 .app-form {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 2rem auto 0 auto;
+    width: 90%;
+    margin: 2.4rem auto 0 auto;
+    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 2rem;
+    background-color: white;
+    border-radius: 1.8rem;
 }
 
 .app-form__email-input {
@@ -208,12 +213,13 @@ export default {
     text-align: left;
 }
 
-.app-form__submit-button {
-    margin: 1rem auto 2rem auto;
-    /* max-width: 12rem; */
-}
-
 @media screen and (max-width: 600px) {
+
+    .app-form {
+        width: 100%;
+        border-radius: 0;
+    }
+
     .app-form__assets-checkbox-group__checkbox {
         width: 50%;
     }
@@ -226,11 +232,6 @@ export default {
 
     .app-form__email-input__field {
         margin-top: 0.2rem;
-    }
-
-    .app-form__submit-button {
-        margin-top: 2rem;
-        width: 50%;
     }
 }
 

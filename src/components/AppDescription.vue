@@ -29,7 +29,7 @@
         <p>
             To take part, just fill in the form below.
         </p>
-        <h1>
+        <h1 class="description__content__header">
           About project
         </h1>
         <p>
@@ -80,15 +80,20 @@ export default {
 
 .description {
   padding: 2rem 0;
+  text-align: left;
+  min-height: 100vh;
   /* good */
   /* background-color: #E0E2E5; */
-  background-color: #EBEDEE;
+  /* background-color: #EBEDEE; */
 }
 
 .description__content {
-  width: 60%;
+  width: 80%;
   margin: auto;
-  max-width: 40rem;
+}
+
+.description__content__header {
+  margin-top: 3rem;
 }
 
 .description__addresses {
@@ -99,6 +104,10 @@ export default {
 
   .description__content {
     width: 90%;
+  }
+
+  .description__content__header {
+    margin-top: 3.5rem;
   }
 
 }
