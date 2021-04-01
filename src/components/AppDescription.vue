@@ -52,14 +52,16 @@
         <p>
           Support development of this project:
         </p>
-        <div>
-            BTC: 1DkQTzGvYvqzjHFYc5Zejx9ZUNE9NbxKBv
-        </div>
-        <div>
-            ETH: 0xa58bccec9364c22d2a6e5e8e30b056ff9a0dfc7c
-        </div>
-        <div>
-            LTC: LViYjGcuqEwRGFrWieL4NwMTXq1Fng5XBM
+        <div class="description__addresses">
+          <div>
+              BTC: 1DkQTzGvYvqzjHFYc5Zejx9ZUNE9NbxKBv
+          </div>
+          <div>
+              ETH: 0xa58bccec9364c22d2a6e5e8e30b056ff9a0dfc7c
+          </div>
+          <div>
+              LTC: LViYjGcuqEwRGFrWieL4NwMTXq1Fng5XBM
+          </div>
         </div>
       </div>
     </div>
@@ -87,6 +89,10 @@ export default {
   width: 60%;
   margin: auto;
   max-width: 40rem;
+}
+
+.description__addresses {
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 600px) {
